@@ -38,15 +38,26 @@
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="H7c-iS-UPt">
                                 <rect key="frame" x="252" y="549" width="50" height="50"/>
                                 <state key="normal" image="heart"/>
+                                <connections>
+                                    <action selector="onLike:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Ums-MU-zFH"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zcm-De-uan">
                                 <rect key="frame" x="93" y="549" width="50" height="50"/>
                                 <state key="normal" image="close-o@1x"/>
+                                <connections>
+                                    <action selector="onCancel:" destination="BYZ-38-t0r" eventType="touchUpInside" id="tDF-ab-Sst"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
+                    <connections>
+                        <outlet property="cancelButton" destination="Zcm-De-uan" id="E4b-f9-2RL"/>
+                        <outlet property="card1ImageView" destination="Hgw-O1-A04" id="9Hr-Rk-Ntl"/>
+                        <outlet property="likeButton" destination="H7c-iS-UPt" id="WfI-Bv-61O"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
