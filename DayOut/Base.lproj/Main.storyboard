@@ -17,6 +17,12 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="DayOut" translatesAutoresizingMaskIntoConstraints="NO" id="DuV-Xh-dXq">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="ranchoBackground" translatesAutoresizingMaskIntoConstraints="NO" id="KRu-Sb-m8T">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                            </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background-swipe" translatesAutoresizingMaskIntoConstraints="NO" id="F65-aJ-3Mb">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                             </imageView>
@@ -29,12 +35,16 @@
                                     <tabBarItem title="" image="profile-inactive" id="Wk5-Cs-nim"/>
                                 </items>
                             </tabBar>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="rancho" translatesAutoresizingMaskIntoConstraints="NO" id="Zcv-O4-6Fr">
+                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="rancho" translatesAutoresizingMaskIntoConstraints="NO" id="Zcv-O4-6Fr">
                                 <rect key="frame" x="39" y="160" width="337" height="335"/>
+                                <gestureRecognizers/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="335" id="OVf-oh-GEf"/>
                                     <constraint firstAttribute="width" constant="337" id="gqf-4O-Vb3"/>
                                 </constraints>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="M3C-Gm-PZf" appends="YES" id="LV3-E2-gMS"/>
+                                </connections>
                             </imageView>
                             <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="card1" translatesAutoresizingMaskIntoConstraints="NO" id="Hgw-O1-A04">
                                 <rect key="frame" x="39" y="168" width="337" height="335"/>
@@ -101,7 +111,10 @@
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
                     <connections>
                         <outlet property="cancelButton" destination="Zcm-De-uan" id="E4b-f9-2RL"/>
+                        <outlet property="card1Background" destination="F65-aJ-3Mb" id="mR7-Qn-54p"/>
                         <outlet property="card1ImageView" destination="Hgw-O1-A04" id="9Hr-Rk-Ntl"/>
+                        <outlet property="card2Background" destination="KRu-Sb-m8T" id="2gb-vP-52P"/>
+                        <outlet property="card2ImageView" destination="Zcv-O4-6Fr" id="DVM-0u-ivW"/>
                         <outlet property="likeButton" destination="H7c-iS-UPt" id="WfI-Bv-61O"/>
                         <outlet property="panGestureRecognizer" destination="MDz-We-b5r" id="hir-Vh-ojS"/>
                     </connections>
@@ -112,11 +125,17 @@
                         <action selector="onSwipe:" destination="BYZ-38-t0r" id="Y8K-tC-IaF"/>
                     </connections>
                 </panGestureRecognizer>
+                <panGestureRecognizer minimumNumberOfTouches="1" id="M3C-Gm-PZf">
+                    <connections>
+                        <action selector="onCard2Swipe:" destination="BYZ-38-t0r" id="Ahr-dd-AuE"/>
+                    </connections>
+                </panGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="181" y="343"/>
         </scene>
     </scenes>
     <resources>
+        <image name="DayOut" width="375" height="667"/>
         <image name="background-swipe" width="375" height="616"/>
         <image name="card1" width="337" height="335"/>
         <image name="close-o@1x" width="50" height="50"/>
@@ -124,6 +143,7 @@
         <image name="home" width="26" height="26"/>
         <image name="profile-inactive" width="29" height="29"/>
         <image name="rancho" width="310" height="331"/>
+        <image name="ranchoBackground" width="375" height="620"/>
         <image name="swipe-active" width="32" height="30"/>
         <image name="swipe-inactive" width="32" height="30"/>
     </resources>
