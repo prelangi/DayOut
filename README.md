@@ -13,3 +13,4 @@ All icons provided by Ozlem Billis
 # Video gif
 
 Link to gif: https://github.com/prelangi/DayOut/blob/add_swipe_support/dayOut2.gif
+<img src='https://github.com/prelangi/DayOut/blob/add_swipe_support/dayOut2.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
