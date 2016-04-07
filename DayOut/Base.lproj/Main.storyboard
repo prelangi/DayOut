@@ -32,8 +32,12 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="card2" translatesAutoresizingMaskIntoConstraints="NO" id="Zcv-O4-6Fr">
                                 <rect key="frame" x="39" y="160" width="337" height="335"/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="card1" translatesAutoresizingMaskIntoConstraints="NO" id="Hgw-O1-A04">
+                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="card1" translatesAutoresizingMaskIntoConstraints="NO" id="Hgw-O1-A04">
                                 <rect key="frame" x="38" y="168" width="337" height="335"/>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="MDz-We-b5r" appends="YES" id="7su-KG-8Wj"/>
+                                </connections>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="H7c-iS-UPt">
                                 <rect key="frame" x="252" y="549" width="50" height="50"/>
@@ -57,9 +61,15 @@
                         <outlet property="cancelButton" destination="Zcm-De-uan" id="E4b-f9-2RL"/>
                         <outlet property="card1ImageView" destination="Hgw-O1-A04" id="9Hr-Rk-Ntl"/>
                         <outlet property="likeButton" destination="H7c-iS-UPt" id="WfI-Bv-61O"/>
+                        <outlet property="panGestureRecognizer" destination="MDz-We-b5r" id="hir-Vh-ojS"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <panGestureRecognizer minimumNumberOfTouches="1" id="MDz-We-b5r">
+                    <connections>
+                        <action selector="onSwipe:" destination="BYZ-38-t0r" id="Y8K-tC-IaF"/>
+                    </connections>
+                </panGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="181" y="343"/>
         </scene>
