@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="14F1509" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="DayOut" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="background-swipe" translatesAutoresizingMaskIntoConstraints="NO" id="F65-aJ-3Mb">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="687"/>
+                            </imageView>
+                            <tabBar contentMode="scaleToFill" fixedFrame="YES" translucent="NO" selectionIndicatorImage="swipe-active" translatesAutoresizingMaskIntoConstraints="NO" id="rfl-hM-CEm">
+                                <rect key="frame" x="0.0" y="687" width="414" height="49"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <items>
+                                    <tabBarItem title="" image="home" id="4aU-mQ-Lpx"/>
+                                    <tabBarItem image="swipe-inactive" id="Wm4-Ir-7Ux"/>
+                                    <tabBarItem title="" image="profile-inactive" id="Wk5-Cs-nim"/>
+                                </items>
+                            </tabBar>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="card2" translatesAutoresizingMaskIntoConstraints="NO" id="Zcv-O4-6Fr">
+                                <rect key="frame" x="39" y="160" width="337" height="335"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="card1" translatesAutoresizingMaskIntoConstraints="NO" id="Hgw-O1-A04">
+                                <rect key="frame" x="38" y="168" width="337" height="335"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="H7c-iS-UPt">
+                                <rect key="frame" x="252" y="549" width="50" height="50"/>
+                                <state key="normal" image="heart"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zcm-De-uan">
+                                <rect key="frame" x="93" y="549" width="50" height="50"/>
+                                <state key="normal" image="close-o@1x"/>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="181" y="343"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="background-swipe" width="375" height="616"/>
+        <image name="card1" width="337" height="335"/>
+        <image name="card2" width="310" height="289"/>
+        <image name="close-o@1x" width="50" height="50"/>
+        <image name="heart" width="50" height="50"/>
+        <image name="home" width="26" height="26"/>
+        <image name="profile-inactive" width="29" height="29"/>
+        <image name="swipe-active" width="32" height="30"/>
+        <image name="swipe-inactive" width="32" height="30"/>
+    </resources>
+</document>
