@@ -17,10 +17,10 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="background-swipe" translatesAutoresizingMaskIntoConstraints="NO" id="F65-aJ-3Mb">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="687"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background-swipe" translatesAutoresizingMaskIntoConstraints="NO" id="F65-aJ-3Mb">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                             </imageView>
-                            <tabBar contentMode="scaleToFill" fixedFrame="YES" translucent="NO" selectionIndicatorImage="swipe-active" translatesAutoresizingMaskIntoConstraints="NO" id="rfl-hM-CEm">
+                            <tabBar contentMode="scaleToFill" translucent="NO" selectionIndicatorImage="swipe-active" translatesAutoresizingMaskIntoConstraints="NO" id="rfl-hM-CEm">
                                 <rect key="frame" x="0.0" y="687" width="414" height="49"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <items>
@@ -29,25 +29,41 @@
                                     <tabBarItem title="" image="profile-inactive" id="Wk5-Cs-nim"/>
                                 </items>
                             </tabBar>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="card2" translatesAutoresizingMaskIntoConstraints="NO" id="Zcv-O4-6Fr">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="rancho" translatesAutoresizingMaskIntoConstraints="NO" id="Zcv-O4-6Fr">
                                 <rect key="frame" x="39" y="160" width="337" height="335"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="335" id="OVf-oh-GEf"/>
+                                    <constraint firstAttribute="width" constant="337" id="gqf-4O-Vb3"/>
+                                </constraints>
                             </imageView>
-                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="card1" translatesAutoresizingMaskIntoConstraints="NO" id="Hgw-O1-A04">
-                                <rect key="frame" x="38" y="168" width="337" height="335"/>
+                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="card1" translatesAutoresizingMaskIntoConstraints="NO" id="Hgw-O1-A04">
+                                <rect key="frame" x="39" y="168" width="337" height="335"/>
                                 <gestureRecognizers/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="335" id="RGe-3O-hPk"/>
+                                    <constraint firstAttribute="width" constant="337" id="WLe-Vo-3dE"/>
+                                </constraints>
                                 <connections>
                                     <outletCollection property="gestureRecognizers" destination="MDz-We-b5r" appends="YES" id="7su-KG-8Wj"/>
                                 </connections>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="H7c-iS-UPt">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="H7c-iS-UPt">
                                 <rect key="frame" x="252" y="549" width="50" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="8Yv-jX-wye"/>
+                                    <constraint firstAttribute="width" constant="50" id="Giy-t0-KQq"/>
+                                </constraints>
                                 <state key="normal" image="heart"/>
                                 <connections>
                                     <action selector="onLike:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Ums-MU-zFH"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zcm-De-uan">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zcm-De-uan">
                                 <rect key="frame" x="93" y="549" width="50" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="2cq-wZ-fFn"/>
+                                    <constraint firstAttribute="width" constant="50" id="QeJ-i3-jp6"/>
+                                </constraints>
                                 <state key="normal" image="close-o@1x"/>
                                 <connections>
                                     <action selector="onCancel:" destination="BYZ-38-t0r" eventType="touchUpInside" id="tDF-ab-Sst"/>
@@ -55,6 +71,32 @@
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="Zcv-O4-6Fr" secondAttribute="trailing" constant="38" id="17U-KO-ZK9"/>
+                            <constraint firstItem="H7c-iS-UPt" firstAttribute="leading" secondItem="Zcm-De-uan" secondAttribute="trailing" constant="109" id="2SM-FL-Opl"/>
+                            <constraint firstItem="rfl-hM-CEm" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="7Ki-QP-bc9"/>
+                            <constraint firstItem="Hgw-O1-A04" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="148" id="8pf-la-HUe"/>
+                            <constraint firstItem="Zcm-De-uan" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="93" id="AS8-Zp-dee"/>
+                            <constraint firstItem="Zcm-De-uan" firstAttribute="top" secondItem="Hgw-O1-A04" secondAttribute="bottom" constant="46" id="CT7-jk-aYk"/>
+                            <constraint firstItem="rfl-hM-CEm" firstAttribute="top" secondItem="Zcm-De-uan" secondAttribute="bottom" constant="88" id="E09-ys-5qh"/>
+                            <constraint firstItem="rfl-hM-CEm" firstAttribute="top" secondItem="Zcm-De-uan" secondAttribute="bottom" constant="88" id="HYk-gr-Cw0"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="F65-aJ-3Mb" secondAttribute="bottom" id="Hew-Jb-gNj"/>
+                            <constraint firstItem="Zcv-O4-6Fr" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="39" id="HgX-yQ-Kkk"/>
+                            <constraint firstItem="Hgw-O1-A04" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="38" id="KZE-vN-Cq3"/>
+                            <constraint firstItem="Zcm-De-uan" firstAttribute="top" secondItem="Hgw-O1-A04" secondAttribute="bottom" constant="46" id="MWS-y0-dwP"/>
+                            <constraint firstAttribute="trailing" secondItem="H7c-iS-UPt" secondAttribute="trailing" constant="112" id="RoG-H9-QBb"/>
+                            <constraint firstItem="Zcv-O4-6Fr" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="140" id="S81-wz-6ou"/>
+                            <constraint firstItem="rfl-hM-CEm" firstAttribute="top" secondItem="H7c-iS-UPt" secondAttribute="bottom" constant="88" id="UBP-Cm-eVR"/>
+                            <constraint firstItem="H7c-iS-UPt" firstAttribute="leading" secondItem="Zcm-De-uan" secondAttribute="trailing" constant="109" id="XLo-d5-e5F"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="rfl-hM-CEm" secondAttribute="bottom" id="Xhi-dZ-gaI"/>
+                            <constraint firstAttribute="trailing" secondItem="Hgw-O1-A04" secondAttribute="trailing" constant="39" id="fxb-HM-MDU"/>
+                            <constraint firstItem="F65-aJ-3Mb" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="h7b-a7-fcD"/>
+                            <constraint firstAttribute="trailing" secondItem="F65-aJ-3Mb" secondAttribute="trailing" id="qy7-XV-T4x"/>
+                            <constraint firstItem="Zcm-De-uan" firstAttribute="top" secondItem="Zcv-O4-6Fr" secondAttribute="bottom" constant="54" id="sDN-ey-lbF"/>
+                            <constraint firstAttribute="trailing" secondItem="rfl-hM-CEm" secondAttribute="trailing" id="uMP-EK-xub"/>
+                            <constraint firstItem="F65-aJ-3Mb" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="yRg-ie-UI5"/>
+                            <constraint firstItem="H7c-iS-UPt" firstAttribute="top" secondItem="Hgw-O1-A04" secondAttribute="bottom" constant="46" id="z7g-Tm-Zqo"/>
+                        </constraints>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
                     <connections>
@@ -77,11 +119,11 @@
     <resources>
         <image name="background-swipe" width="375" height="616"/>
         <image name="card1" width="337" height="335"/>
-        <image name="card2" width="310" height="289"/>
         <image name="close-o@1x" width="50" height="50"/>
         <image name="heart" width="50" height="50"/>
         <image name="home" width="26" height="26"/>
         <image name="profile-inactive" width="29" height="29"/>
+        <image name="rancho" width="310" height="331"/>
         <image name="swipe-active" width="32" height="30"/>
         <image name="swipe-inactive" width="32" height="30"/>
     </resources>
